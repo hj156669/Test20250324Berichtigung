@@ -160,6 +160,10 @@ app.get('/agb', (req, res) => {
 
 	if(kunde.IstEingeloggt){
 
+		// Die res. render muss zwischen if und else getauscht werden. 
+		// Wenn der Kunde eingeloggt ist, wird die agb-Seite gerendert.
+		// Wenn die Zugangsdaten nicht korrekt sind, dann wird er zur login zurückgeworfen.
+
 		// Wenn die Zugangsdaten korrekt sind, dann wird die angesurfte Seite gerendert.
 		res.render('login.ejs',{});
 
